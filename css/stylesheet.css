@@ -1,0 +1,690 @@
+
+
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+#timelineDiv {
+  position:relative;
+  max-width:400px;
+}
+
+.timeline {
+	position: relative;
+  margin:0 auto;
+	list-style-type: none;
+	padding: 20px 0 20px 25px;
+	font-family: "Oswald",sans-serif;
+	width:100%;
+  margin-bottom:0;
+  margin-top:70px;
+  margin-right:20px;
+
+}
+/*vertical line*/
+.timeline:before {
+	content: '';
+	position: absolute;
+	width: 2px;
+	height: 95%;
+	top: 0;
+	left: 204px;
+	border:solid 2px #738798;
+	background:#5F5F5F;
+}
+
+.event {
+	position: relative;
+	margin-bottom: 85px;
+	padding-right: 0px;
+}
+/*left box size etc*/
+.thumb {
+	position: absolute;
+	/*justify:left;*/
+	width: 150px;
+	height: 50px;
+  background-color:#F1F2E9;
+  border-radius:1px;
+	box-shadow:
+		0 0 0 3px rgba(95, 95, 95, 1),
+		0 1px 1px rgba(255,255,255,0.5);
+	-webkit-transform: scale(0.8) translateX(24px);
+	-moz-transform: scale(0.8) translateX(24px);
+	-o-transform: scale(0.8) translateX(24px);
+	-ms-transform: scale(0.8) translateX(24px);
+	transform: scale(.8) translateX(24px);
+	left:-20px;
+  top:21px;
+  /*text-align:center;*/
+  display:block;
+  padding-top:10px;
+  text-align:center;
+}
+/*crossbars*/
+.thumb:before {
+	content: '';
+	position: absolute;
+	height: 2px;
+	z-index: -2;
+	background:#5F5F5F;
+	width: 150px;
+	top: 23px;
+	left: 100%;
+	margin-left:2px;
+	margin-right:2px;
+}
+/*Year positioning*/
+.thumb span {
+  position:relative;
+	color: #5F5F5F;
+	/*width: 100%;*/
+	font-weight: 400;
+	font-size: 1.9em;
+	text-transform: uppercase;
+  /*line-height:1.3;*/
+  left: 0;
+  top:-5px;
+}
+.thumb ul{
+  position:relative;
+  list-style-type:none;
+  display:inline-block;
+  bottom:5px;
+  font-size: 0.7em;
+  margin: 0 3px 0 3px;
+  line-height:1.1;
+}
+.companyN:before {
+	content: '';
+	position: relative;
+	z-index: -1;
+	margin-left:2px;
+	margin-bottom:-15px;
+	margin-right:2px;
+	left: 100%;
+	background:#5F5F5F;
+	/*background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAPElEQVQYV2NkQAP/gYARCNDFUQRgirAphitEl0TngxXisg5ZnBGXIpgbYfIYjkb3BNxGbBLYxIgyEaQRAA8KKAWYsZtjAAAAAElFTkSuQmCC);*/
+}
+
+.companyN {
+	position:absolute;
+	margin-top:23px;
+	padding-top: 10px;
+	color: #5F5F5F;
+  border-radius:1px;
+	box-shadow:
+		0 0 0 3px rgba(95, 95, 95, 1),
+		0 1px 1px rgba(255,255,255,0.5);
+		/*Borders for inner h3 company names*/
+	left:235px;
+	width:150px;
+  height:50px;
+	text-align: center;
+	font-weight: 500;
+	font-size: 110%;
+	text-transform: uppercase;
+	background:#F1F2E9;
+	-webkit-transform: scale(0.8) translateX(-24px);
+	-moz-transform: scale(0.8) translateX(-24px);
+	-o-transform: scale(0.8) translateX(-24px);
+	-ms-transform: scale(0.8) translateX(-24px);
+	transform: scale(0.8) translateX(-24px);
+
+}
+/* Transparent Checkbox/radio hack: leave the checkbox on top, hide it with opacity 0 */
+
+.event label,
+.event input[type="radio"] {
+	width: 24px;
+	height: 24px;
+	left: 171px;
+	 /*added this to see if I could create an extension to the business name from timeline*/
+	top: 36px;
+	position: absolute;
+	display: block;
+	margin:0;
+	padding:0;
+}
+
+.event input[type="radio"] {
+	opacity: 0;
+	z-index: 10;
+	cursor: pointer;
+}
+
+.event label:after {
+	font-family: 'FontAwesome';
+	content: '\f096';
+	background: #F1F2E9;
+	border-radius: 50%;
+	color: #5F5F5F;
+	font-size: 26px;
+	height: 100%;
+	width: 100%;
+	left: -2px;
+	top: -3px;
+	line-height: 24px;
+	position: absolute;
+	text-align: center;
+	z-index:9;
+}
+
+.content-perspective {
+	margin-left: 315px; /*Change this for the body of appearing text position*/
+	position: relative;
+
+}
+
+ /*Change this for the body of appearing text position*/
+
+.content-perspective:before {
+	content: '';
+	width: 37px;
+	left: -51px;
+	top: 45px;
+	position: absolute;
+	height: 1px;
+	z-index: -1;
+	background: #fff;
+}
+
+.content {
+	-webkit-transform: rotateY(10deg);
+	-moz-transform: rotateY(10deg);
+	-o-transform: rotateY(10deg);
+	-ms-transform: rotateY(10deg);
+	transform: rotateY(10deg);
+
+	-webkit-transform-origin: 0 0;
+	-moz-transform-origin: 0 0;
+	-o-transform-origin: 0 0;
+	-ms-transform-origin: 0 0;
+	transform-origin: 0 0;
+
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.content-inner {
+	padding: 20px;
+	color: #333;
+	border: none;
+	background: transparent;
+	margin-top:0;
+}
+
+.content-inner p {
+	top:-200px;
+	font-size: 18px;
+	max-height: 0px;
+	overflow: hidden;
+	color: transparent;
+	color: rgba(0,0,0,0);
+	text-align: left;
+}
+
+.content-inner ul {
+	font-size: 18px;
+	max-height: 0px;
+	color: rgba(0,0,0,0);
+	text-align: left;
+  position:absolute;
+}
+
+.content-inner:before {
+	font-family: 'fontawesome-selected';
+	content: '\25c2';
+	font-weight: normal;
+	font-size: 54px;
+	line-height: 4px;
+	position: relative; /*was absolute. trying to get it to float against the job title box*/
+	width: 20px;
+	height: 20px;
+	color: #F1F2E9;
+	top: 25px;
+	z-index: -1;
+  float:right;
+  padding:0;
+  margin-right:-30px;
+  padding-right:-15px;
+}/*Change this for the arrows coming off the timeline*/
+
+
+
+/* Transitions */
+
+.thumb,
+.thumb span,
+.companyN {
+	-webkit-transition: all 0.6s ease-in-out 0.2s;
+	-moz-transition: all 0.6s ease-in-out 0.2s;
+	-o-transition: all 0.6s ease-in-out 0.2s;
+	-ms-transition: all 0.6s ease-in-out 0.2s;
+	transition: all 0.6s ease-in-out 0.2s;
+}
+
+.content {
+	-webkit-transition: -webkit-transform 0.8s cubic-bezier(.59,1.45,.69,.98) 0.2s;
+	-moz-transition: -moz-transform 0.8s cubic-bezier(.59,1.45,.69,.98) 0.2s;
+	-o-transition: -o-transform 0.8s cubic-bezier(.59,1.45,.69,.98) 0.2s;
+	-ms-transition: -ms-transform 0.8s cubic-bezier(.59,1.45,.69,.98) 0.2s;
+	transition: transform 0.8s cubic-bezier(.59,1.45,.69,.98) 0.2s;
+}
+
+.content-inner p {
+	-webkit-transition: max-height 0.5s linear, color 0.3s linear;
+	-moz-transition: max-height 0.5s linear, color 0.3s linear;
+	-o-transition: max-height 0.5s linear, color 0.3s linear;
+	-ms-transition: max-height 0.5s linear, color 0.3s linear;
+	transition: max-height 0.5s linear, color 0.3s linear;
+}
+
+.content-inner ul {
+	-webkit-transition: max-height 0.5s linear, color 0.3s linear;
+	-moz-transition: max-height 0.5s linear, color 0.3s linear;
+	-o-transition: max-height 0.5s linear, color 0.3s linear;
+	-ms-transition: max-height 0.5s linear, color 0.3s linear;
+	transition: max-height 0.5s linear, color 0.3s linear;
+}
+
+/* Checked */
+
+.event input[type="radio"]:checked + label:after {
+	content: '\f14a';
+	color: #333333;
+	box-shadow: 0 rgba(255, 255, 255, 0.8);
+}
+
+
+.event input[type="radio"]:checked ~ .companyN .content-perspective {
+	color: #333333;
+	box-shadow:
+		0 0 0 8px rgba(51,51,51,1),
+		0 1px 1px rgba(254,5,5,.5);
+}
+
+.event input[type="radio"]:checked ~ .content-perspective .content-inner p {
+	max-height: 260px; /* Add media queries */
+	color: rgba(0,0,0,0.6);
+	-webkit-transition-delay: 0s, 0.6s;
+	-moz-transition-delay: 0s, 0.6s;
+	-o-transition-delay: 0s, 0.6s;
+	-ms-transition-delay: 0s, 0.6s;
+	transition-delay: 0s, 0.6s;
+}
+
+.event input[type="radio"]:checked ~ .content-perspective .content-inner ul {
+	max-height: 260px; /* Add media queries */
+	color: rgba(0,0,0,0.6);
+	-webkit-transition-delay: 0s, 0.6s;
+	-moz-transition-delay: 0s, 0.6s;
+	-o-transition-delay: 0s, 0.6s;
+	-ms-transition-delay: 0s, 0.6s;
+	transition-delay: 0s, 0.6s;
+	font-size:1em;
+}
+
+.event input[type="radio"]:checked ~ .content-perspective .content-inner:before {
+	color: #333333;
+}
+
+.event input[type="radio"]:checked ~ .thumb {
+	box-shadow:
+		0 0 0 4px rgba(51,51,51,1),
+		0 1px 1px rgba(254,5,5,.5);
+}
+
+.event input[type="radio"]:checked ~ .companyN {
+	box-shadow:
+		0 0 0 4px rgba(51,51,51,1),
+		0 1px 1px rgba(254,5,5,.5);
+}
+
+.event input[type="radio"]:checked ~ .thumb span {
+	color: #5F5F5F;
+}
+
+.event input[type="radio"]:checked ~ .companyN {
+	color: #5F5F5F;
+}
+
+
+.event input[type="radio"]:checked ~ .thumb:before {
+	background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAPUlEQVQYV2NkQAOfUjX+882+wYgujiIAU4RNMVwhuiQ6H6wQl3XI4oy4FMHcCJPHcDS6J2A2EqUQpJhohQBbNyaHFmzEqgAAAABJRU5ErkJggg==);
+
+}
+
+.event input[type="radio"]:checked ~ .content-inner:before {
+	background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAICAYAAADA+m62AAAAPUlEQVQYV2NkQAOfUjX+882+wYgujiIAU4RNMVwhuiQ6H6wQl3XI4oy4FMHcCJPHcDS6J2A2EqUQpJhohQBbNyaHFmzEqgAAAABJRU5ErkJggg==);
+
+}
+
+.content-inner p,
+.content-inner ul,
+.companyN,
+.thumb,
+.thumb span,
+.event label {
+	-webkit-backface-visibility: hidden;
+}
+
+@media screen and (max-width: 850px) {
+  #timelineDiv {
+    max-width:400px;
+    position:relative;
+    margin:0 auto;
+    padding:0;
+  }
+  .resumeDex {
+    position:relative;
+    margin:0 auto;
+    padding:0;
+  }
+
+	.content-inner p {
+		font-size: 14px;
+		text-align: justify;
+	}
+
+	.event input[type="radio"]:checked ~ .content-perspective .content-inner p .content-inner ul {
+		max-height: 500px;
+	}
+}
+
+@media screen and (max-width: 950px) {
+  .resumeDes {
+    padding:0;
+    font-size:90%;
+    top:70px;
+  }
+  .jobDescription {
+    margin-bottom:0;
+    height:175px;
+  }
+  .jobBullets {
+    /*height:210px;*/
+  }
+  #timelineDiv {
+    position:relative;
+    /*margin:0 auto;*/
+    /*width:100%;*/
+    height:350px;
+    right:-25%;
+    top:45px;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  .timeline {
+    position:relative;
+    margin:0 auto;
+    vertical-align:middle;
+  }
+  .event input::before{
+    /*left:35px;*/
+  }
+	.event {
+		position:relative;
+		padding-right: 40px;
+		margin-bottom: 80px;
+	}
+
+	.thumb { /*I added in the span here for a subtle transform*/
+		-webkit-transform: scale(0.5);
+		-moz-transform: scale(0.5);
+		-o-transform: scale(0.5);
+		-ms-transform: scale(0.5);
+		transform: scale(0.5);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    font-size:80%;
+    height:35px;
+    width:130px;
+    left:-5px;
+	}
+
+	.companyN {
+		-webkit-transform: scale(0.5);
+		-moz-transform: scale(0.5);
+		-o-transform: scale(0.5);
+		-ms-transform: scale(0.5);
+		transform: scale(0.5);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    left:35px;
+    top:15px;
+    font-size:100%;
+    height:35px;
+    width:130px;
+	}
+
+	.event input[type="radio"] {
+		width: 100px;
+		height: 100px;
+		left: 85px;
+		top: 0px;
+	}
+
+	.thumb:before,
+	.event input[type="radio"]:checked ~ .thumb:before {
+		background: none;
+		width: 0;
+	}
+
+	.companyN:before,
+	.event input[type="radio"]:checked ~ .companyN:before {
+		background: none;
+		width: 0;
+	}
+
+	.content-inner:before {
+		content: '\25b4';
+		left: -133px;
+    top:20px;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+	}
+
+	.event input[type="radio"]:checked ~ .content-perspective .content-inner p .content-inner ul {
+		max-height: 200px;
+    /*left: 35px;*/
+	}
+  .thumb:before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    z-index: -2;
+    background:#5F5F5F;
+    width: 80px;
+    top: 79px;
+    left: 100%;
+    margin-left:2px;
+    margin-right:2px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    left:77px;
+  }
+  .event label:after {
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+  }
+
+}
+
+  /*Resume add_content styles & resume dl button*/
+
+  .sectionTitles {
+    line-height:50px;
+    text-align:center;
+    font-family: 'Oswald', sans-serif;
+    margin-top:52px;
+    margin-bottom:0;
+    top:0;
+    background: -moz-linear-gradient(#ffffff 0%, #ffffff 49%, #000000 50%, #000000 51%, #ffffff 52%, #ffffff 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(49%, #ffffff), color-stop(50%, #000000), color-stop(51%, #000000), color-stop(52%, #ffffff), color-stop(100%, #ffffff));
+    background: -webkit-linear-gradient(#ffffff 0%, #ffffff 49%, #000000 50%, #000000 51%, #ffffff 52%, #ffffff 100%);
+    background: -o-linear-gradient(#ffffff 0%, #ffffff 49%, #000000 50%, #000000 51%, #ffffff 52%, #ffffff 100%);
+    background: linear-gradient(#ffffff 0%, #ffffff 49%, #F1F2E9 50%, #F1F2E9 51%, #ffffff 52%, #ffffff 100%);
+  }
+
+  .sectionTitles span {
+    background: #fff;
+    padding: 0 20px;
+    position: relative;
+    z-index: 5;
+  }
+  .row > h3 {
+    text-align:center;
+    font-size:2em;
+    background-color:#fff;
+    margin-top:-5px;
+    padding-bottom:10px;
+  }
+  #timelineDiv {
+    padding-bottom:25px;
+    bottom:25px;
+  }
+  #timelinePresent {
+    position:absolute;
+    margin:0 auto;
+    text-align:center;
+    color:#5F5F5F;
+    top:-25px;
+    height:25px;
+    width:100px;
+    background-color:#F1F2E9;
+    border:3px solid #5E5E5E;
+    border-radius:4px;
+    left:157px;
+  }
+  #timelineYear {
+    position:absolute;
+    text-align:center;
+    color:#5F5F5F;
+    margin:0 auto;
+    text-align:center;
+    bottom:-25px;
+    height:25px;
+    width:100px;
+    background-color:#F1F2E9;
+    border:3px solid #5E5E5E;
+    border-radius:4px;
+    left:157px;
+    bottom:20px;
+  }
+  .resumeDes {
+    /*right:50px;*/
+    padding-left:15px;
+    top:50px;
+    /*margin-right:50px;*/
+  }
+  .positionTitle {
+    text-transform: uppercase;
+    background-color:#F1F2E9;
+    float:left;
+    width:100%;
+    height:75px;
+    text-align:center;
+    padding-top:5px;
+    margin-top:0;
+
+  }
+  .positionTitle h4{
+    text-transform: uppercase;
+    background-color:#F1F2E9;
+    text-align:center;
+    padding-top:0;
+    background-color:#F1F2E9;
+    background: -moz-linear-gradient(#F1F2E9 0%, #F1F2E9 49%, #000000 50%, #000000 51%, #F1F2E9 52%, #F1F2E9 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #F1F2E9), color-stop(49%, #F1F2E9), color-stop(50%, #000000), color-stop(51%, #000000), color-stop(52%, #F1F2E9), color-stop(100%, #F1F2E9));
+    background: -webkit-linear-gradient(#F1F2E9 0%, #F1F2E9 49%, #000000 50%, #000000 51%, #F1F2E9 52%, #F1F2E9 100%);
+    background: -o-linear-gradient(#F1F2E9 0%, #F1F2E9 49%, #000000 50%, #000000 51%, #F1F2E9 52%, #F1F2E9 100%);
+    background: linear-gradient(#F1F2E9 0%, #F1F2E9 49%, #fff 50%, #fff 51%, #F1F2E9 52%, #F1F2E9 100%);
+
+  }
+  .positionTitle h4 span {
+    background:#F1F2E9;
+    padding: 0 20px;
+    position: relative;
+    z-index: 5;
+    color:#777777;
+  }
+  #positionTitle h5 {
+    text-transform: uppercase;
+    text-align:center;
+    margin-top:0;
+  }
+
+  .jobDescription {
+    text-transform: uppercase;
+    position:relative;
+    background-color:#F1F2E9;
+    clear:left;
+    float:left;
+    width:100%;
+    height:210px;
+    padding:0 35px 0 30px;
+    /*border-left:1px solid #333333;*/
+    font-size:.9em;
+  }
+  .jobBullets {
+    text-transform: uppercase;
+    background-color:#F1F2E9;
+    clear:left;
+    float:right;
+    width:100%;
+    max-height:465px;
+    min-height:210px;
+    padding:0 30px 0 40px;
+    /*border-left:1px solid #333333;*/
+    font-size:.9em;
+    margin-top:0;
+  }
+
+  .jobBullets ul {
+    list-style-type: square;
+  }
+  #resumeDlDiv {
+    position:relative;
+    /*height:0;*/
+    /*clear:both;*/
+    top:-25px;
+    background-color:#F1F2E9;
+    width:100%;
+  }
+  #resumeDlDiv a {
+    margin: 0;
+    background: #F85653;
+    position: absolute;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    /*bottom:245px;*/
+    text-transform: uppercase;
+    color:white;
+  }

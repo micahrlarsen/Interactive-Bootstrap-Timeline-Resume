@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Interactive Bootstrap Timeline/ Resume</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="css/custom.css" rel="stylesheet" type="text/css" />
+    <link href="css/stylesheet.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+
+
+  <div class="container-fluid">
+
+
+        <div id="workexp"  class="row">
+
+           <h2 class="sectionTitles"><span>WORK EXPERIENCE</span></h2>
+           <h3><small>TIMELINE</small></h3>
+        </div>
+
+      <div class="row">
+
+
+          <div id="timelineDiv" class="col-xs-12 col-sm-12 col-md-4">
+
+
+              <ul class="timeline">
+
+                <div id="timelinePresent">PRESENT</div>
+
+                <li class="event">
+                  <input type="radio" onclick="add_content()" value="write" name="tl-group" checked/>
+                  <label></label>
+                  <div class="thumb"><small><ul><li>A</li><li>P</li><li>R</li></ul></small><span>2014 -</span><small><ul><li>N</li><li>O</li><li>V</li></ul></small><span>2014</span></div>
+                  <h3 class="companyN">Campus Logic</h3>
+                  <div class="content-perspective">
+                    <div class="content">
+
+                      <div class="content-inner">
+
+                        <!-- leave empty: to be filled by add_content below -->
+
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="event">
+
+
+                  <input type="radio" onclick="add_content2()" value="write" name="tl-group"/>
+                  <label></label>
+                  <div class="thumb"><small><ul><li>J</li><li>U</li><li>L</li></ul></small><span>2013 -</span><small><ul><li>A</li><li>P</li><li>R</li></ul></small><span>2014</span></div>
+                  <h3 class="companyN">Tallwave</h3>
+                  <div class="content-perspective">
+                    <div class="content">
+
+                      <div class="content-inner">
+
+                        <!-- leave empty: to be filled by add_content below -->
+
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="event">
+                  <input type="radio" onclick="add_content3()" value="write" name="tl-group"/>
+                  <label></label>
+                  <div class="thumb"><small><ul><li>F</li><li>E</li><li>B</li></ul></small><span>2012 -</span><small><ul><li>J</li><li>U</li><li>L</li></ul></small><span>2013</span></div>
+                  <h3 class="companyN">Health Services</h3>
+                  <div class="content-perspective">
+                    <div class="content">
+
+                      <div class="content-inner">
+
+                        <!-- leave empty: to be filled by add_content below -->
+
+                      </div>
+                    </div>
+                  </div>
+                </li>
+
+                <li class="event">
+                  <input type="radio" onclick="add_content4()" value="write" name="tl-group"/>
+                  <label></label>
+                      <div class="thumb"><small><ul><li>S</li><li>E</li><li>P</li></ul></small><span>2008 -</span><small><ul><li>D</li><li>E</li><li>C</li></ul></small><span>2012</span></div>
+                      <h3 class="companyN">Gourmet Orchard</h3>
+                  <div class="content-perspective">
+                    <div class="content">
+
+                      <div class="content-inner">
+
+                        <!-- leave empty: to be filled by add_content below -->
+
+                      </div>
+
+                    </div>
+                  </div>
+                </li>
+
+                <div id="timelineYear">2008</div>
+
+              </ul>
+
+            </div>
+              <!--Containers for Timeline content below-->
+            <div class="resumeDes col-xs-12 col-sm-12 col-md-8">
+
+              <div class="positionTitle">
+                <h4><span>JOB TITLE</span></h4>
+                <h5 id="positionTitle"></h5>
+              </div>
+
+                <div id="resumeDlDiv">
+
+                  <a type="button" class="btn btn-default" a href="#">Download <i class="fa fa-download"></i>
+                    Resume</a>
+
+                </div>
+
+              <div class="jobDescription">
+                <p id="jobDescription"></p>
+              </div>
+
+              <div class="jobBullets">
+                <p id="jobBullets"></p>
+              </div>
+
+
+            </div>
+
+    </div>
+
+
+</div>
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/modernizr.custom.63321.js"></script>
+    <script src="http://code.jquery.com/jquery.min.js" type="text/javascript"></script>
+    <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript">
+
+      function add_content(){
+        $('#positionTitle, #jobDescription, #jobBullets').empty();
+
+        var positionTitle = $('#positionTitle');
+
+        positionTitle.append( "<h5><strong>Commander & Chief</strong></h5>");
+
+        var jobDescription = $('#jobDescription');
+
+        jobDescription.append( "<p><strong>Filler Text</strong></p>" );
+
+        var jobBullets = $('#jobBullets');
+
+        jobBullets.append( "<strong><p><ul><li>Filler Text</li><li>Filler Text</li><li>Filler Text</li></ul></p></strong>" );
+      }
+
+      function add_content2(){
+        $('#positionTitle, #jobDescription, #jobBullets').empty();
+
+        var positionTitle = $('#positionTitle');
+
+        positionTitle.append( "<h5><strong>Senior Marketing Executive</strong></h5>");
+
+        var jobDescription = $('#jobDescription');
+
+        jobDescription.append( "<p><strong>Oversaw and managed all phases of go-to-market activities for clients and partners, with an emphasis on content and digital marketing, for the consulting arm of the business; activities included strategic planning, positioning and branding, distribution, delivery and ongoing management of content and digital marketing campaigns. Worked cross-functionally to develop marketing materials against brand propositions. Used metrics and written reports to update senior leadership on progress and outcomes against key metrics. Determined and managed marketing budgets and oversaw client delivery through internal and external resources within agreed upon budgets.</p></strong>" );
+
+        var jobBullets = $('#jobBullets');
+
+        jobBullets.append( "<strong><p><ul><li>Developed content marketing strategy and execution by working closely with product marketing team on the development of a 3-month user persona and market research project, which informed messaging, digital marketing efforts and content marketing strategy to key customer segments.</li><li>Developed digital marketing strategy to focus the organizations key performance indicators and drive revenue, qualified leads, brand presence, customer experience and awareness, resulting in a 75% close rate with qualified leads contributing over $1.3M in revenue to the services side of the organization on a $75,000 annual marketing budget</li><li>Developed content and digital marketing strategy for a B2C consumer goods company focusing on content, distribution, social, SEO and SEM channels resulting in a 173% ROI over a 3-month period. Optimized retargeting campaigns resulting in a 28x ROI on retargeting advertisements</li></ul></p></strong>" );
+      }
+
+      function add_content3(){
+        $('#positionTitle, #jobDescription, #jobBullets').empty();
+
+        var positionTitle = $('#positionTitle');
+
+        positionTitle.append( "<h5><strong>Cheif Marketing Officer</strong></h5>");
+
+        var jobDescription = $('#jobDescription');
+
+        jobDescription.append( "<strong><p>Responsible for the development and implementation of the organizational strategic marketing plan, to build awareness of the Stat Doctors brand and service amongst key stakeholders, internal and external. Activities included working cross-functionally across all departments to ensure that strategic initiatives were being implemented effectively and in accordance with brand guidelines, the development and management of marketing budget, managing external agency relationships, defining project objectives and parameters, while ensuring that objectives were achieved.</p></strong>" );
+
+        var jobBullets = $('#jobBullets');
+
+        jobBullets.append( "<strong><p><ul><li>Established brand and product guidelines for both online and offline use, designed to ensure a consistent presentation of the brand and its value propositions to internal and external stakeholders.</li><li>Responsible for identifying business needs and developing requirements documents to inform the selection process of key technology platforms and analytics tools used to maximize performance and optimize digital marketing campaigns.</li><li>Wrote the application and presentation, which played an integral role in securing the Arizona Innovation Challenge, which was accompanied by a $250,000 grant.</li><li>Defined and led video marketing project to build brand awareness. Video received 18,383 views over a 4-month period and was recognized with multiple national and international awards.</li><li>Defined and led the initiative to grow brand recognition, which lead to a 31% increase in organic search engine traffic from brand specific search queries over the 2012 calendar year.</li><li>Managed and organized vendors, technology, budgets and processes to drive scalable growth, measured against key performance indicators.</li><li>Designed and implemented an email marketing campaign to drive utilization with our end users, resulting in a 574% increase in registered users over a 9-month period.</li></ul></p></strong>" );
+      }
+
+      function add_content4(){
+        $('#positionTitle, #jobDescription, #jobBullets').empty();
+
+        var positionTitle = $('#positionTitle');
+
+        positionTitle.append( "<h5><strong>Founder & CEO</strong></h5>");
+
+        var jobDescription = $('#jobDescription');
+
+        jobDescription.append( "<strong><p>Founded Gourmet Orchards in 2008, an ecommerce business, by utilizing Lean Startup Methodologies. Defined organization’s long-term strategies to build awareness and increase revenue and implemented the tactical initiatives to achieve those long-term strategies. Managed all phases of the go-to-market activities, including positioning and branding. Defined and managed the development and implementation of many iterations of the website to focus on engaging content, maximize consumer engagement and drive sales. Activities included definition of processes and development of schedules surrounding content and digital marketing efforts in owned media spaces (i.e. website, blog, social, etc.), definition of user experience and site requirements to create that experience.</p></strong>" );
+
+        var jobBullets = $('#jobBullets');
+
+        jobBullets.append( "<strong><p><ul><li>Built and managed an 11 person content marketing team (4 internal and 7 external contractors) focusing on blog posts, articles, visual content, infographics, social, distribution, email, video, presentation and much more.</li><li>Defined the evolution and managed the implementation of web presence based upon user actions.</li><li>Managed web property, analyzing traffic and developing actionable changes through a website redesign to optimize the user experience and guide visitors through the conversion funnel, resulting in an overall boost in conversion rate of 45% (from 3.3% to 4.79%) and an increase in page views of 67%.</li><li>Defined and implemented SEO strategies, heavily supported by content marketing, which lead to an 87% increase in organic search traffic over the 2012 year with a 74% boost in unique visitors.</li><li>Managed, developed and A/B tested over 6,000 targeted landing pages over a 6-month period to maximize ROI on pay-per-click marketing campaign resulting in a 178% increase in revenue from paid advertising channels</li><li>Defined and led social strategy, leading to a 32x follower growth over a 2-month period</li><li>Leveraged social connections to increase referrals from social channels by 533% and grew conversions from social channels from 8% of total sales to 16% of total sales.</li><li>Doubled growth year-over-year, for 4 consecutive years</li></ul></p></strong>" );
+      }
+    </script>
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+  </body>
+</html>
