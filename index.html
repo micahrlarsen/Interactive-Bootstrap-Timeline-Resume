@@ -12,6 +12,7 @@
     <link href="css/stylesheet.css" rel="stylesheet">
     <link href="css/font-awesome.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 
     <style>
 
@@ -33,6 +34,8 @@
 
       <div class="row">
 
+        <div id="photoBg">
+          <div id="transparentBg">
 
           <div id="timelineDiv" class="col-xs-12 col-sm-12 col-md-4">
 
@@ -48,6 +51,8 @@
                   <h3 class="companyN">Campus Logic</h3>
                   <div class="content-perspective">
                     <div class="content">
+
+                      <div class="content-inner-date"></div>
 
                       <div class="content-inner">
 
@@ -68,6 +73,8 @@
                   <div class="content-perspective">
                     <div class="content">
 
+                      <div class="content-inner-date"></div>
+
                       <div class="content-inner">
 
                         <!-- leave empty: to be filled by add_content below -->
@@ -85,6 +92,8 @@
                   <div class="content-perspective">
                     <div class="content">
 
+                      <div class="content-inner-date"></div>
+
                       <div class="content-inner">
 
                         <!-- leave empty: to be filled by add_content below -->
@@ -101,6 +110,8 @@
                       <h3 class="companyN">Gourmet Orchard</h3>
                   <div class="content-perspective">
                     <div class="content">
+
+                      <div class="content-inner-date"></div>
 
                       <div class="content-inner">
 
@@ -120,31 +131,74 @@
               <!--Containers for Timeline content below-->
             <div class="resumeDes col-xs-12 col-sm-12 col-md-8">
 
-              <div class="positionTitle">
-                <h4><span>JOB TITLE</span></h4>
-                <h5 id="positionTitle"></h5>
-              </div>
+              <!-- <div id="photoBg"> -->
 
-                <div id="resumeDlDiv">
+                <!-- <div id="transparentBg"> -->
 
-                  <a type="button" class="btn btn-default" a href="#">Download <i class="fa fa-download"></i>
-                    Resume</a>
+                  <div class="positionTitle">
+                    <h6 id=positionYear></h6>
+                    <h6 id=businessName></h6>
+                    <h5 id="positionTitle"></h5>
+                  </div>
+
+
+                  <div class="jobDescription">
+                    <p id="jobDescription"></p>
+                  </div>
+
+                  <div class="jobBullets">
+                    <p id="jobBullets"></p>
+                  </div>
 
                 </div>
 
-              <div class="jobDescription">
-                <p id="jobDescription"></p>
               </div>
 
-              <div class="jobBullets">
-                <p id="jobBullets"></p>
-              </div>
-
-
-            </div>
+        </div>
 
     </div>
 
+
+    <div class="row">
+
+      <div class="col-md-12">
+
+
+
+
+          <div id="resumeDlDiv">
+
+            <a type="button" class="btn btn-default" a href="#">Download</br><i class="fa fa-download fa-2x"></i></br>
+              Resume</a>
+
+          </div>
+
+
+
+      </div>
+
+    </div>
+    <footer>
+
+      <div class="row">
+
+        <div class="col-md-12">
+          <h4>SAY HELLO</h4>
+          <ul class="social">
+            <li><a href="https://twitter.com/scribcreate" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></li>
+            <li><a href="https://linkedin.com/in/micahrlarsen/en" target="_blank"><i class="fa fa-linkedin fa-2x"></i></a></li>
+            <li><a href="https://instagram.com/micahrlarsen" target="_blank"><i class="fa fa-instagram fa-2x"></i></a></li>
+            <li><a href="https://angel.co/micah-larsen" target="_blank"><i class="fa fa-angellist fa-2x"></i></a></li>
+            <li><a href="https://github.com/micahrlarsen" target="_blank"><i class="fa fa-github fa-2x"></i></a></li>
+
+          </ul>
+          <p>All Rights Reserverd Scribblebot Creations</p>
+
+        </div>
+
+      </div>
+
+    </footer>
 
 </div>
 
@@ -158,7 +212,7 @@
     <script type="text/javascript">
 
       function add_content(){
-        $('#positionTitle, #jobDescription, #jobBullets').empty();
+        $('#positionTitle, #jobDescription, #jobBullets, #positionYear, #businessName').empty();
 
         var positionTitle = $('#positionTitle');
 
@@ -171,10 +225,18 @@
         var jobBullets = $('#jobBullets');
 
         jobBullets.append( "<strong><p><ul><li>Filler Text</li><li>Filler Text</li><li>Filler Text</li></ul></p></strong>" );
+
+        var positionYear = $('#positionYear');
+
+        positionYear.append("<p><i>apr 2014 - nov 2014</i></p>")
+
+        var positionYear = $('#businessName');
+
+        positionYear.append("<p><i>campus logic</i></p>")
       }
 
       function add_content2(){
-        $('#positionTitle, #jobDescription, #jobBullets').empty();
+        $('#positionTitle, #jobDescription, #jobBullets, #positionYear, #businessName').empty();
 
         var positionTitle = $('#positionTitle');
 
@@ -187,10 +249,18 @@
         var jobBullets = $('#jobBullets');
 
         jobBullets.append( "<strong><p><ul><li>Developed content marketing strategy and execution by working closely with product marketing team on the development of a 3-month user persona and market research project, which informed messaging, digital marketing efforts and content marketing strategy to key customer segments.</li><li>Developed digital marketing strategy to focus the organizations key performance indicators and drive revenue, qualified leads, brand presence, customer experience and awareness, resulting in a 75% close rate with qualified leads contributing over $1.3M in revenue to the services side of the organization on a $75,000 annual marketing budget</li><li>Developed content and digital marketing strategy for a B2C consumer goods company focusing on content, distribution, social, SEO and SEM channels resulting in a 173% ROI over a 3-month period. Optimized retargeting campaigns resulting in a 28x ROI on retargeting advertisements</li></ul></p></strong>" );
+
+        var positionYear = $('#positionYear');
+
+        positionYear.append("<p><i>july 2013 - apr 2014</i></p>")
+
+        var positionYear = $('#businessName');
+
+        positionYear.append("<p><i>tallwave</i></p>")
       }
 
       function add_content3(){
-        $('#positionTitle, #jobDescription, #jobBullets').empty();
+        $('#positionTitle, #jobDescription, #jobBullets, #positionYear, #businessName').empty();
 
         var positionTitle = $('#positionTitle');
 
@@ -203,10 +273,18 @@
         var jobBullets = $('#jobBullets');
 
         jobBullets.append( "<strong><p><ul><li>Established brand and product guidelines for both online and offline use, designed to ensure a consistent presentation of the brand and its value propositions to internal and external stakeholders.</li><li>Responsible for identifying business needs and developing requirements documents to inform the selection process of key technology platforms and analytics tools used to maximize performance and optimize digital marketing campaigns.</li><li>Wrote the application and presentation, which played an integral role in securing the Arizona Innovation Challenge, which was accompanied by a $250,000 grant.</li><li>Defined and led video marketing project to build brand awareness. Video received 18,383 views over a 4-month period and was recognized with multiple national and international awards.</li><li>Defined and led the initiative to grow brand recognition, which lead to a 31% increase in organic search engine traffic from brand specific search queries over the 2012 calendar year.</li><li>Managed and organized vendors, technology, budgets and processes to drive scalable growth, measured against key performance indicators.</li><li>Designed and implemented an email marketing campaign to drive utilization with our end users, resulting in a 574% increase in registered users over a 9-month period.</li></ul></p></strong>" );
+
+        var positionYear = $('#positionYear');
+
+        positionYear.append("<p><i>feb 2012 - jul 2013</i></p>")
+
+        var positionYear = $('#businessName');
+
+        positionYear.append("<p><i>health services</i></p>")
       }
 
       function add_content4(){
-        $('#positionTitle, #jobDescription, #jobBullets').empty();
+        $('#positionTitle, #jobDescription, #jobBullets, #positionYear, #businessName').empty();
 
         var positionTitle = $('#positionTitle');
 
@@ -219,6 +297,15 @@
         var jobBullets = $('#jobBullets');
 
         jobBullets.append( "<strong><p><ul><li>Built and managed an 11 person content marketing team (4 internal and 7 external contractors) focusing on blog posts, articles, visual content, infographics, social, distribution, email, video, presentation and much more.</li><li>Defined the evolution and managed the implementation of web presence based upon user actions.</li><li>Managed web property, analyzing traffic and developing actionable changes through a website redesign to optimize the user experience and guide visitors through the conversion funnel, resulting in an overall boost in conversion rate of 45% (from 3.3% to 4.79%) and an increase in page views of 67%.</li><li>Defined and implemented SEO strategies, heavily supported by content marketing, which lead to an 87% increase in organic search traffic over the 2012 year with a 74% boost in unique visitors.</li><li>Managed, developed and A/B tested over 6,000 targeted landing pages over a 6-month period to maximize ROI on pay-per-click marketing campaign resulting in a 178% increase in revenue from paid advertising channels</li><li>Defined and led social strategy, leading to a 32x follower growth over a 2-month period</li><li>Leveraged social connections to increase referrals from social channels by 533% and grew conversions from social channels from 8% of total sales to 16% of total sales.</li><li>Doubled growth year-over-year, for 4 consecutive years</li></ul></p></strong>" );
+
+        var positionYear = $('#positionYear');
+
+        positionYear.append("<p><i>sept 2008 - dec 2012</i></p>")
+
+        var positionYear = $('#businessName');
+
+        positionYear.append("<p><i>gourmet orchard</i></p>")
+
       }
     </script>
     <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
